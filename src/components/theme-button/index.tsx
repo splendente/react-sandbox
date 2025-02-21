@@ -2,7 +2,7 @@ import { useState, createContext, useContext } from 'react';
 
 const ThemeContext = createContext(''); // This will create a context
 
-export function Theme() {
+export function ThemeButton() {
   const [theme, setTheme] = useState('dark');
 
   const toggleTheme = () => {
@@ -11,12 +11,12 @@ export function Theme() {
 
   return (
     <ThemeContext.Provider value={{theme, toggleTheme}}>
-      <Child />
+      <Button />
     </ThemeContext.Provider>
   )
 }
 
-function Child () {
+function Button () {
   const { theme, toggleTheme } = useContext(ThemeContext); // This will read the context
 
   return (
