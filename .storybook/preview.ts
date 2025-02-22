@@ -1,4 +1,9 @@
 import type { Preview } from "@storybook/react";
+import { initialize, mswLoader } from 'msw-storybook-addon';
+import { handlers } from './../mocks/handers';
+
+// Initialize MSW
+initialize();
 
 const preview: Preview = {
   parameters: {
@@ -8,7 +13,9 @@ const preview: Preview = {
         date: /Date$/i,
       },
     },
+    msw: handlers,
   },
+  loaders: [mswLoader],
 };
 
 export default preview;
