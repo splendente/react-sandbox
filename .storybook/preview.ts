@@ -3,7 +3,11 @@ import { initialize, mswLoader } from 'msw-storybook-addon';
 import { handlers } from './../mocks/handers';
 
 // Initialize MSW
-initialize();
+initialize({
+  serviceWorker: {
+    url: '/mockServiceWorker.js',
+  }
+});
 
 const preview: Preview = {
   parameters: {
