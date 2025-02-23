@@ -3,10 +3,10 @@ import { initialize, mswLoader } from 'msw-storybook-addon';
 import { handlers } from './../mocks/handers';
 
 let options = {};
-if (location.hostname === "username.github.io") {
+if (location.hostname === "splendente.github.io") {
   options = {
     serviceWorker: {
-      url: "/repo-name/mockServiceWorker.js",
+      url: "/react-sandbox/mockServiceWorker.js",
     },
   };
 }
