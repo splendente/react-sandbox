@@ -15,6 +15,7 @@ if (location.hostname === "splendente.github.io") {
 initialize(options);
 
 const preview: Preview = {
+  tags: ['autodocs'],
   parameters: {
     controls: {
       matchers: {
